@@ -11,7 +11,7 @@ $header-font-family: "minion-pro", serif;
 $body-font-family: $header-font-family;
 
 $base-font-size: 21;
-$small-font-size: 17;
+$small-font-size: 18;
 
 $h1-size: 34;
 $h2-size: 26;
@@ -26,7 +26,9 @@ $footer-height: ($baseline * 5);
 $background-color: #fdfdfd;
 $text-color: #111;
 $primary: #933;
-//$primary: #802b2b;
+$primary: #a03a2c;
+$primary: #52527a;
+$primary: #9b1722;
 
 $link-color: $text-color;
 $link-color: $primary;
@@ -159,10 +161,10 @@ figure {
 //
 // LAYOUT STYLES
 #body-wrapper {
-  $wrapper-color: rgba((darken($primary, 2%)), 0.44);
+  $wrapper-color: rgba((darken($primary, 5%)), 0.66);
   border: solid $wrapper-color;
   border-width: pte(($baseline/4), $base-font-size);
-  padding: pte($baseline, $base-font-size);
+  padding: pte($baseline, $base-font-size) pte(($baseline * .66), $base-font-size);
 }
 
 .container {
@@ -228,23 +230,22 @@ footer {
 
 .post-list {
   .summary:first-child {
-    /* margin-top: pte(($baseline - 5), $base-font-size); */
-    margin-top: 0;
     border-top: none;
-    padding-top: 0;
+    padding-top: pte($baseline, $base-font-size);
   }
 }
 
 .summary {
-  margin-top: pte(($baseline - 1), $base-font-size);
-  padding: pte($baseline, $base-font-size) 0;
+  padding-top: pte(($baseline * 2), $base-font-size);
+  padding-bottom: pte((($baseline * 2) - 1), $base-font-size);
   border-top: 1px solid lighten($text-color, 80%);
 
   .summary-header {
-    padding: pte($baseline, $base-font-size) 0;
+    padding: 0 0 pte($baseline, $base-font-size);
     
     .summary-title {
       margin: 0;
+      line-height: 100%;
 
       a {
         text-decoration: none;

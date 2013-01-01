@@ -1,0 +1,304 @@
+---
+---
+// SCSS for the whole blog - we don't need to split into multiple files really,
+// it should remain pretty simple for the most part.
+
+//
+// VARIABLES
+
+// type settings
+$header-font-family: "minion-pro", serif;
+$body-font-family: $header-font-family;
+
+$base-font-size: 21;
+$small-font-size: 17;
+
+$h1-size: 34;
+$h2-size: 26;
+$h3-size: 21;
+$baseline: ($base-font-size * 1.4);
+
+// layout settings
+$max-container-width: 620px;
+$footer-height: ($baseline * 5);
+
+// color settings
+$background-color: #fdfdfd;
+$text-color: #111;
+$primary: #933;
+//$primary: #802b2b;
+
+$link-color: $text-color;
+$link-color: $primary;
+$link-active-color: lighten($primary, 10%);
+
+// SCSS UTILITIES
+//
+@function pte($target, $context) {
+  @return (($target/$context) + 0em);
+}
+
+//
+// BASE STYLES
+
+// simple reset
+* {
+  box-sizing: border-box;
+  -mox-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: serif;
+  font-size: ((100%/16)*$base-font-size);
+
+  // comment this out to hide baseline grid
+  // background: url("http://www.baselineme.com/#{$baseline}") center top repeat;
+}
+
+a {
+  color: $link-color;
+  
+  &:hover {
+    color: $link-active-color;
+  }
+}
+
+.small {
+  font-size: pte($small-font-size, $base-font-size);
+  line-height: pte($baseline, $small-font-size);
+}
+
+p {
+  line-height: pte($baseline, $base-font-size);
+  margin-bottom: pte($baseline, $base-font-size);
+}
+
+h1, h2, h3 {
+  font-family: $header-font-family;
+  color: $text-color;
+  font-weight: 600;
+  text-align: center;
+}
+
+h1 {
+  font-size: pte($h1-size, $base-font-size);
+  line-height: pte($baseline, $h1-size);
+  margin-bottom: pte($baseline, $h1-size);
+}
+
+h2 {
+  font-size: pte($h2-size, $base-font-size);
+  line-height: pte($baseline, $h2-size);
+  margin-bottom: pte($baseline, $h2-size);
+  font-style: italic;
+}
+
+h3 {
+  font-size: pte($h3-size, $base-font-size);
+  line-height: pte($baseline, $h3-size);
+  margin-bottom: pte($baseline, $h3-size);
+}
+
+ul, ol {
+  margin-bottom: pte($baseline, $base-font-size);
+  line-height: pte($baseline, $base-font-size);
+}
+li li {
+  font-size: 100%;
+}
+
+// responsive changes for base type size
+@media screen and (max-width: 688px) {
+  body {
+    font-size: ((100%/16)*19);
+  }
+}
+
+@media screen and (max-width: 601px) {
+  body {
+    font-size: ((100%/16)*18);
+  }
+}
+
+@media screen and (max-width: 486px) {
+  body {
+    font-size: ((100%/16)*17);
+  }
+}
+
+img,
+object,
+embed,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+figure {
+  margin-bottom: pte($baseline, $base-font-size);
+
+  figcaption {
+    @extend .small;
+    padding: 0 pte(($baseline/4), $base-font-size);
+    margin-bottom: pte(($baseline * 0.75), $base-font-size);
+    text-align: right;
+    margin-bottom: 0;
+    font-style: italic;
+  }
+}
+
+//
+// LAYOUT STYLES
+#body-wrapper {
+  $wrapper-color: rgba((darken($primary, 2%)), 0.44);
+  border: solid $wrapper-color;
+  border-width: pte(($baseline/4), $base-font-size);
+  padding: pte($baseline, $base-font-size);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $max-container-width;
+  overflow: hidden;
+}
+
+header {
+  border-bottom: 1px solid lighten($text-color, 80%);
+  margin-bottom: pte(($baseline - 1), $base-font-size);
+
+  nav {
+    ul {
+      list-style: none;
+      text-align: center;
+
+      li {
+        @extend .small;
+        display: inline;
+        margin: 0 pte(($baseline/2), $base-font-size);
+      }
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+#archive {
+  margin-top: pte($baseline, $base-font-size);
+
+  .section-title {
+    margin-bottom: pte($baseline, $base-font-size);
+  }
+
+  .month-title {
+    margin-top: pte(($baseline/2), $base-font-size);
+    margin-bottom: pte(($baseline/2), $base-font-size);
+  }
+}
+
+#about-austin {
+  margin-top: pte($baseline, $base-font-size);
+}
+
+footer {
+  padding-top: pte(($baseline * 2), $base-font-size);
+
+  p {
+    text-align: center;
+    @extend .small
+  }
+}
+
+// MODULE STYLES
+.center-list {
+  li {
+    text-align: center;
+  }
+}
+
+.post-list {
+  .summary:first-child {
+    /* margin-top: pte(($baseline - 5), $base-font-size); */
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+.summary {
+  margin-top: pte(($baseline - 1), $base-font-size);
+  padding: pte($baseline, $base-font-size) 0;
+  border-top: 1px solid lighten($text-color, 80%);
+
+  .summary-header {
+    padding: pte($baseline, $base-font-size) 0;
+    
+    .summary-title {
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+
+        &:hover {
+          text-decoration: underline;
+          color: $link-active-color;
+        }
+      }
+    }
+  }
+
+  .summary-body {
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    img,
+    iframe,
+    object,
+    embed {
+      margin: pte($baseline, $base-font-size) auto 0;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .summary-footer {
+    p {
+      @extend .small;
+      color: lighten($text-color, 50%);
+      font-style: italic;
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+}
+
+// STICKY FOOTER
+// it's all the way down here so we can override things easily
+html, body {
+  height: 100%;
+}
+
+#sticky-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -(pte($footer-height, $base-font-size));
+}
+
+footer, #sticky-push {
+  height: pte($footer-height, $base-font-size);
+}

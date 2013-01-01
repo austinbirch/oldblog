@@ -1,0 +1,19 @@
+{% if page %}
+{% assign post = page %}
+{% endif %}
+
+ <section class="summary">
+  <div class="summary-header">
+    <h1 class="summary-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  </div>
+
+  <div class="summary-body">
+    {{ post.content | markdownify }}
+  </div>
+
+  <div class="summary-footer">
+    <p>
+      posted on {{ post.date | date_to_string }}</a>
+    </p>
+  </div>
+</section>

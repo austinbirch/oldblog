@@ -2,6 +2,7 @@
 layout: default
 title: blog
 ---
+{% assign excerpt = true %}
 {% for post in site.posts %}
-  {% include post-summary.html %}
+  {% include post.html %}
 {% endfor %}

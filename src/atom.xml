@@ -1,0 +1,30 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>austinbirch.co.uk</title>
+  <link href="http://austinbirch.co.uk/"/>
+  <link type="application/atom+xml" rel="self" href="http://austinbirch.co.uk/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://austinbirch.co.uk/</id>
+  <author>
+    <name>Austin Birch</name>
+    <email>hello@austinbirch.co.uk</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://austinbirch.co.uk{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://austinbirch.co.uk{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Austin Birch</name>
+      <uri>http://austinbirch.co.uk</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>

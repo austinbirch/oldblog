@@ -6,7 +6,9 @@ echo "Install build-essential"
 apt-get install build-essential -y
 
 echo "Install javscript runtime for ruby"
-gem install libv8 --no-ri --no-rdoc && gem install therubyracer --no-ri --no-rdoc
+if ! gem list libv8 -i; then
+    gem install libv8 --no-ri --no-rdoc && gem install therubyracer --no-ri --no-rdoc
+fi
 
 echo "Install SASS gem"
 gem install sass --no-ri --no-rdoc

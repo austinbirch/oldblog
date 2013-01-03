@@ -198,6 +198,11 @@ header {
 #archive {
   margin-top: pte($baseline, $base-font-size);
 
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+
   .section-title {
     margin-bottom: pte($baseline, $base-font-size);
   }
@@ -210,6 +215,13 @@ header {
 
 #about-austin {
   margin-top: pte($baseline, $base-font-size);
+}
+
+#elsewhere {
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
 }
 
 footer {

@@ -138,10 +138,15 @@ embed,
 iframe {
   display: block;
   max-width: 100%;
+  margin-bottom: pte($baseline, $base-font-size);
 }
 
 figure {
   margin-bottom: pte($baseline, $base-font-size);
+
+  image {
+    margin-bottom: 0;
+  }
 
   figcaption {
     @extend .small;
@@ -217,6 +222,13 @@ footer {
 }
 
 // MODULE STYLES
+.monospace {
+  font-family: "Monaco", monospace;
+  font-size: 0.7em;
+  background-color: #eee;
+  padding: 0.2em 0.4em;
+}
+
 .center-list {
   li {
     text-align: center;
@@ -271,7 +283,7 @@ footer {
     iframe,
     object,
     embed {
-      margin: pte($baseline, $base-font-size) auto 0;
+      margin: 0 auto pte($baseline, $base-font-size);
     }
 
     p:first-child {
@@ -288,6 +300,13 @@ footer {
       text-align: right;
     }
   }
+}
+
+// CODE HIGHLIGHTING
+pre code {
+  margin: 0 0 pte($baseline, $base-font-size);
+  $baseline-em: pte($baseline, $base-font-size);
+  padding: ($baseline-em/2) ($baseline-em*2);
 }
 
 // STICKY FOOTER

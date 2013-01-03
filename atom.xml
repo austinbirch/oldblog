@@ -3,7 +3,7 @@
   <title>austinbirch.co.uk</title>
   <link href="http://austinbirch.co.uk/"/>
   <link type="application/atom+xml" rel="self" href="http://austinbirch.co.uk/atom.xml"/>
-  <updated>2013-01-03T12:39:14+00:00</updated>
+  <updated>2013-01-03T13:54:41+00:00</updated>
   <id>http://austinbirch.co.uk/</id>
   <author>
     <name>Austin Birch</name>
@@ -304,7 +304,7 @@ FEN notation&lt;/a&gt; of the game, and loading from that.
       <name>Austin Birch</name>
       <uri>http://austinbirch.co.uk</uri>
     </author>
-    <content type="html">&lt;iframe width='600' height='338' frameborder='0' src='https://www.youtube-nocookie.com/embed/HAfFfqiYLp0'&gt;&amp;nbsp;&lt;/iframe&gt;
+    <content type="html">&lt;iframe width='600' frameborder='0' height='338' src='https://www.youtube-nocookie.com/embed/HAfFfqiYLp0'&gt;&amp;nbsp;&lt;/iframe&gt;
 &lt;p&gt;There is some really great typography in this video. Be warned though &amp;#8212; &amp;#8220;This video has been identified by Epilepsy Action to potentially trigger seizures for people with photosensitive epilepsy.&amp;#8221;&lt;/p&gt;
 
 &lt;p&gt;The type comes in at about one minute.&lt;/p&gt;</content>

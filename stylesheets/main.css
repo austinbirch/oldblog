@@ -51,8 +51,8 @@ h3 {
 
 ul, ol {
   margin-bottom: 1.4em;
-  margin-left: 2em;
-  line-height: 1.4em; }
+  line-height: 1.4em;
+  list-style: none; }
 
 li li {
   font-size: 100%; }
@@ -96,7 +96,6 @@ header {
   border-bottom: 1px solid #dddddd;
   margin-bottom: 1.35238em; }
   header nav ul {
-    list-style: none;
     text-align: center; }
     header nav ul li {
       display: inline;
@@ -106,9 +105,6 @@ header {
 
 #archive {
   margin-top: 1.4em; }
-  #archive ul {
-    list-style: none;
-    margin-left: 0; }
   #archive .section-title {
     margin-bottom: 1.4em; }
   #archive .month-title {
@@ -117,10 +113,6 @@ header {
 
 #about-austin {
   margin-top: 1.4em; }
-
-#elsewhere ul {
-  list-style: none;
-  margin-left: 0; }
 
 footer {
   padding-top: 2.8em; }
@@ -157,6 +149,9 @@ footer {
           color: #c71e2c; }
   .post .post-body h1, .post .post-body h2, .post .post-body h3 {
     text-align: center; }
+  .post .post-body ul, .post .post-body ol {
+    padding-left: 2em;
+    list-style-type: disc; }
   .post .post-body .read-more {
     text-align: center; }
   .post .post-body img,

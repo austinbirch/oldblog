@@ -112,8 +112,8 @@ h3 {
 
 ul, ol {
   margin-bottom: pte($baseline, $base-font-size);
-  margin-left: pte(($base-font-size*2), $base-font-size);
   line-height: pte($baseline, $base-font-size);
+  list-style: none;
 }
 li li {
   font-size: 100%;
@@ -179,7 +179,6 @@ header {
 
   nav {
     ul {
-      list-style: none;
       text-align: center;
 
       li {
@@ -198,11 +197,6 @@ header {
 #archive {
   margin-top: pte($baseline, $base-font-size);
 
-  ul {
-    list-style: none;
-    margin-left: 0;
-  }
-
   .section-title {
     margin-bottom: pte($baseline, $base-font-size);
   }
@@ -215,13 +209,6 @@ header {
 
 #about-austin {
   margin-top: pte($baseline, $base-font-size);
-}
-
-#elsewhere {
-  ul {
-    list-style: none;
-    margin-left: 0;
-  }
 }
 
 footer {
@@ -283,6 +270,10 @@ footer {
       text-align: center;
     }
 
+    ul, ol {
+      padding-left: pte(($base-font-size*2), $base-font-size);
+      list-style-type: disc;
+    }
     .excerpt p {
       // not sure what I want to do here
     }

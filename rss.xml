@@ -6,8 +6,8 @@
     <atom:link href="http://austinbirch.co.uk/rss.xml" rel="self" type="application/rss+xml" />
     <description>Austin Birch's blog</description>
     <language>en-us</language>
-    <pubDate>Thu, 03 Jan 2013 12:31:37 +0000</pubDate>
-    <lastBuildDate>Thu, 03 Jan 2013 12:31:37 +0000</lastBuildDate>
+    <pubDate>Thu, 03 Jan 2013 12:39:14 +0000</pubDate>
+    <lastBuildDate>Thu, 03 Jan 2013 12:39:14 +0000</lastBuildDate>
 
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Sat, 10 Mar 2012 00:00:00 +0000</pubDate>
       <author>hello@austinbirch.co.uk (Austin Birch)</author>
       <guid>http://austinbirch.co.uk/2012/03/10/chessable</guid>
-      <description>&lt;p&gt;&lt;a href='https://www.chessable.co.uk'&gt;&lt;img src='/assets/img/chessable.png' alt='chessable' /&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href='https://www.chessable.co.uk'&gt;&lt;img alt='chessable' src='/assets/img/chessable.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;To scratch an itch, I built &lt;a href='https://www.chessable.co.uk'&gt;chessable&lt;/a&gt;. chessable is a correspondence chess game with an uncluttered and responsive interface.&lt;/p&gt;
 
@@ -129,7 +129,7 @@ FEN notation&lt;/a&gt; of the game, and loading from that.
 
 &lt;p&gt;I feel privileged to have met somebody that is so dedicated to their field, and that has such a brilliantly expansive domain knowledge.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/assets/img/jeremy_wade.jpg' alt='jeremy_wade' /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt='jeremy_wade' src='/assets/img/jeremy_wade.jpg' /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -140,7 +140,7 @@ FEN notation&lt;/a&gt; of the game, and loading from that.
       <guid>http://austinbirch.co.uk/2011/11/01/early-esc-spritesheet</guid>
       <description>&lt;p&gt;As a little sneak preview of my upcoming iOS game, Esc, here is an early spritesheet (well, a section of) that might give a feel for the art direction of the game.&lt;/p&gt;
 &lt;!--more--&gt;
-&lt;p&gt;&lt;img src='/assets/img/early_esc_spritesheet.png' alt='early_spritesheet' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='early_spritesheet' src='/assets/img/early_esc_spritesheet.png' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Obviously it draws lots of inspiration from &lt;a href='http://thelettervsixtim.es/'&gt;VVVVVV&lt;/a&gt; in terms of art style, and as I&amp;#8217;m using a modified C64 colour palette, the C64 in general.&lt;/p&gt;
 
@@ -164,11 +164,11 @@ FEN notation&lt;/a&gt; of the game, and loading from that.
 
 &lt;p&gt;Here they are:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/assets/img/flightnote_cards.jpg' alt='flightnote_cards' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='flightnote_cards' src='/assets/img/flightnote_cards.jpg' /&gt;&lt;/p&gt;
 
 &lt;p&gt;And to compare them to the paper-based mockups that I created:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/assets/img/mock_flightnote_cards.jpg' alt='flightnote_mock_cards' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='flightnote_mock_cards' src='/assets/img/mock_flightnote_cards.jpg' /&gt;&lt;/p&gt;
 
 &lt;p&gt;The final prints are exactly what I imagined they would be, and I couldn&amp;#8217;t be more pleased. The printing company were effortlessly professsional, which made the whole printing experience painless.&lt;/p&gt;
 
@@ -231,7 +231,7 @@ FEN notation&lt;/a&gt; of the game, and loading from that.
 
 &lt;p&gt;You can play &lt;em&gt;65-73-63&lt;/em&gt; &lt;a href='http://austinbirch.co.uk/65-73-63/'&gt;here&lt;/a&gt;, and that is where I keep the most updated version.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/assets/img/65-73-63-start.png' alt='start' /&gt; &lt;img src='/assets/img/65-73-63-jump.png' alt='jump' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='start' src='/assets/img/65-73-63-start.png' /&gt; &lt;img alt='jump' src='/assets/img/65-73-63-jump.png' /&gt;&lt;/p&gt;
 
 &lt;h2 id='end'&gt;End&lt;/h2&gt;
 
@@ -258,7 +258,7 @@ FEN notation&lt;/a&gt; of the game, and loading from that.
 
 &lt;p&gt;I made these mockups out of paper that I roughly cut into 2.5&amp;#8243; circles, and then glued the front and back sides together. I am now sure that this is the idea I want to follow. All that remains is to finalise the design, and find somewhere that wil print them.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href='http://instagr.am/p/Kg2mD/'&gt;&lt;img src='/assets/img/mock_flightnote_cards.jpg' alt='flightnote cards' /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href='http://instagr.am/p/Kg2mD/'&gt;&lt;img alt='flightnote cards' src='/assets/img/mock_flightnote_cards.jpg' /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -267,7 +267,7 @@ FEN notation&lt;/a&gt; of the game, and loading from that.
       <pubDate>Thu, 11 Aug 2011 00:00:00 +0000</pubDate>
       <author>hello@austinbirch.co.uk (Austin Birch)</author>
       <guid>http://austinbirch.co.uk/2011/08/11/all-of-the-lights-typography</guid>
-      <description>&lt;iframe src='https://www.youtube-nocookie.com/embed/HAfFfqiYLp0' width='600' frameborder='0' height='338'&gt;&amp;nbsp;&lt;/iframe&gt;
+      <description>&lt;iframe width='600' height='338' frameborder='0' src='https://www.youtube-nocookie.com/embed/HAfFfqiYLp0'&gt;&amp;nbsp;&lt;/iframe&gt;
 &lt;p&gt;There is some really great typography in this video. Be warned though &amp;#8212; &amp;#8220;This video has been identified by Epilepsy Action to potentially trigger seizures for people with photosensitive epilepsy.&amp;#8221;&lt;/p&gt;
 
 &lt;p&gt;The type comes in at about one minute.&lt;/p&gt;</description>
@@ -422,7 +422,7 @@ write a new article about the current design later.
       <guid>http://austinbirch.co.uk/2011/02/19/drop_dead_single_player</guid>
       <description>&lt;p&gt;drop_dead is now a (virtually) complete single-player game!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/assets/img/drop_dead_single_player.png' alt='drop_dead' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='drop_dead' src='/assets/img/drop_dead_single_player.png' /&gt;&lt;/p&gt;
 
 &lt;p&gt;There are ten levels to beat, each with a differing level of difficulty.&lt;/p&gt;
 
@@ -450,7 +450,7 @@ write a new article about the current design later.
       <pubDate>Thu, 16 Dec 2010 00:00:00 +0000</pubDate>
       <author>hello@austinbirch.co.uk (Austin Birch)</author>
       <guid>http://austinbirch.co.uk/2010/12/16/dropdead-update-again</guid>
-      <description>&lt;p&gt;&lt;a href='/drop_dead/'&gt;&lt;img src='/assets/img/ai.png' alt='drop_dead' /&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href='/drop_dead/'&gt;&lt;img alt='drop_dead' src='/assets/img/ai.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Things I have added:&lt;/p&gt;
 
@@ -471,7 +471,7 @@ write a new article about the current design later.
       <pubDate>Tue, 14 Dec 2010 00:00:00 +0000</pubDate>
       <author>hello@austinbirch.co.uk (Austin Birch)</author>
       <guid>http://austinbirch.co.uk/2010/12/14/dropdead-update-2</guid>
-      <description>&lt;p&gt;&lt;a href='/drop_dead/'&gt;&lt;img src='/assets/img/collision_detection.png' alt='drop_dead' /&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href='/drop_dead/'&gt;&lt;img alt='drop_dead' src='/assets/img/collision_detection.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The player can now fall of of blocks, using horrendously inefficient collision detection, but at least he does not hang about in the air indefinitely. I will rewrite all of the collision detection later, for now I just want to try and get on to WebSockets and adding a simple scoring system now!&lt;/p&gt;
 
@@ -484,7 +484,7 @@ write a new article about the current design later.
       <pubDate>Mon, 29 Nov 2010 00:00:00 +0000</pubDate>
       <author>hello@austinbirch.co.uk (Austin Birch)</author>
       <guid>http://austinbirch.co.uk/2010/11/29/dropdead</guid>
-      <description>&lt;p&gt;&lt;a href='/drop_dead/'&gt;&lt;img src='/assets/img/drop_dead.png' alt='drop_dead' /&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href='/drop_dead/'&gt;&lt;img alt='drop_dead' src='/assets/img/drop_dead.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;drop_dead is a multiplayer HTML5 Canvas/WebSockets experiment that I am playing with, in order to familiarise myself with those technologies. I will open-source it when I have got it to a point in which it is usable at all &amp;#8212; and that should be soon. View Source if you are really too impatient for that.&lt;/p&gt;
 
@@ -519,7 +519,7 @@ write a new article about the current design later.
 
 &lt;p&gt;Some photographs are below, and some more are on &lt;a href='http://www.flickr.com/photos/austinbirch/sets/72157625481603390'&gt;flickr&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/assets/img/me_and_dad.png' alt='Me &amp;amp; Dad' /&gt; &lt;img src='/assets/img/front_window.png' alt='Return Leg' /&gt; &lt;img src='/assets/img/shadow_on_wing.png' alt='Shadow on the Wing' /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt='Me &amp;amp; Dad' src='/assets/img/me_and_dad.png' /&gt; &lt;img alt='Return Leg' src='/assets/img/front_window.png' /&gt; &lt;img alt='Shadow on the Wing' src='/assets/img/shadow_on_wing.png' /&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

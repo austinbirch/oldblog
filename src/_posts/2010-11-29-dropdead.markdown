@@ -1,0 +1,24 @@
+---
+title: drop_dead
+layout: post
+---
+[![drop_dead](/assets/img/drop_dead.png "drop_dead")](/drop_dead/)
+
+drop_dead is a multiplayer HTML5 Canvas/WebSockets experiment that I am playing with,
+in order to familiarise myself with those technologies. I will open-source it when I have
+got it to a point in which it is usable at all &mdash; and that should be soon. View
+Source if you are really too impatient for that.
+
+I will try and keep an updated version available [here](/drop_dead/), but it will be
+completely broken, and equally unfinished, at various points in time.
+
+The basic concept of the game is this:
+* Players try to drop blocks on other players heads
+* If you are dropping blocks on runners, points for hitting them
+* If you are a runner, points for climbing on droppped blocks and reaching the top
+* Winners from both sides are players which have the most points
+
+It is a bit of a combination of some currently popular ideas.
+
+Try it out, and let me know what you think about it on
+[twitter](https://twitter.com/austinbirch/).

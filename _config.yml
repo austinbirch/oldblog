@@ -1,5 +1,0 @@
-auto: true
-server: true
-destination: ./public
-source: ./src
-plugins: ./_plugins

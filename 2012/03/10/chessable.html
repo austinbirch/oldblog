@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Austin Birch's blog</title>
+
+  <!-- code highlighting -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/highlight.css" />
+  <script src="/javascripts/highlight.pack.js"></script>
+  <script type="text/javascript">
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <!-- typekit -->
+  <script type="text/javascript" src="//use.typekit.net/lkb2raz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <!-- my stuff -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+  <div id="sticky-wrapper">
+    <div id="body-wrapper">
+      <div class="container">
+
+        <div class="container">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">blog</a></li>
+        <li><a href="/archive">archive</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="https://twitter.com/austinbirch">twitter</a></li>
+        <li><a href="http://madebybottle.co.uk/">madebybottle</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+
+        <div class="content">
+          <div class="post-list">
+            <div class="container">
+              
+
+
+
+ <section class="post">
+  <div class="post-header">
+    <h1 class="post-title"><a href="/2012/03/10/chessable.html">chessable</a></h1>
+  </div>
+
+  <div class="post-body">
+    
+      <div class="excerpt"><p><a href='https://www.chessable.co.uk'><img src='/assets/img/chessable.png' alt='chessable' /></a></p>
+
+<p>To scratch an itch, I built <a href='https://www.chessable.co.uk'>chessable</a>. chessable is a correspondence chess game with an uncluttered and responsive interface.</p>
+
+<p>I created it a few weeks ago, as other similar services were cluttered with ads, and laden with extra features. I wanted something simpler to use.</p>
+</div><!--more-->
+<h2 id='which_devices_does_it_work_on'>Which devices does it work on?</h2>
+
+<p>It is playable on any device which has support for the relatively modern HTML5 &#38; CSS3 specs. The major parts of these that chessable leverages is the Canvas element, and font loading through font-face.</p>
+
+<p>The responsive layout is achieved using <a href='http://www.getskeleton.com/'>skeleton</a>, which means that it scales well to almost any screen size. The main reason for opting for a responsive design was that chessable should be playable from anywhere, at any time. I think that it works quite well.</p>
+
+<h2 id='how_its_made'>How it’s made</h2>
+
+<p>The server is a <a href='http://rubyonrails.org/'>Rails 3</a> app, and the client was built with HTML5, CSS, and JavaScript (compiling CoffeeScript to JavaScript via Rails). The chess validation library used is <a href='https://github.com/jhlywa/chess.js'>chess.js</a>, which is really very good.</p>
+
+<p>The chessboard is drawn using HTML5 Canvas, and the chess pieces are loaded as a font, using font-face. The font contains symbols for the chess pieces mapped out as different letters. For example, drawing the letter &#8216;p&#8217; will draw a pawn.</p>
+
+<h2 id='stuff_that_works_well'>Stuff that works well</h2>
+
+<p>Overall the whole app works great. It&#8217;s really simple to use, and pretty much <strong>just works</strong>. I&#8217;m reqlly happy with how it turned out.</p>
+
+<p>Using email notifications to let players know of events works really well. It lets the player get back to the game whenever they feel like playing.</p>
+
+<p>Being written as a web app, it is inherently cross-platform, which is really good. However , it being cross-platform doesn&#8217;t mean that there is no specific work involved for targetting separate platforms.</p>
+
+<h2 id='most_important_bug_fixes_to_make'>Most important bug fixes to make</h2>
+
+<p>Even though I feel chessable works well, there are lots of things that I&#8217;d like to fix, change and implement.</p>
+
+<p>Using a font for the pieces is (currently) responsible for a fair amount of the loading time for a chessboard, and a game preview. Loading a font through font-face, which is to be used with the HTML5 Canvas element, is troublesome. Waiting for <span class='monospace'>$(document).ready()</span> before loading the game isn&#8217;t enough for a cross-platform solution, as some browsers and some devices never seem to load the font (and therefore never displayed the pieces).</p>
+
+<p>The most bulletproof method I have found for ensuring that the pieces are displayed is to wait for <span class='monospace'>$(window).onload()</span>. This is obviously much slower, as everything must be loaded before the game can begin loading.</p>
+
+<p>When there are lots of game previews to be generated on one view, this causes a very long, and unacceptable, loading time. At first this issue didn&#8217;t present itself, but as more games were played, and as more game previews were being loaded (especially on the dashboard view), this has a really negative effect. <strong>Fixing the loading times is &#35;1 on the priority list.</strong> (see update below.)</p>
+<p class='update'>
+Update:<br /><br />
+After some more investigation, it became clear that although the font-face
+loading was slowing things down, this wasn’t the cause of the slow load when
+multiple game previews were being shown.
+<br /><br />
+The slow game preview loading was due to having to compute lots of moves to
+calculate the board positions (from the PGN) for long games.
+<br /><br />
+This was solved by storing a
+ <a href='http://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation'>
+FEN notation</a> of the game, and loading from that.
+</p>
+<h2 id='features_to_add'>Features to add</h2>
+
+<h3 id='game_invites_via_email'>Game invites via email</h3>
+
+<p>Inviting an opponent by email is a feature that I really want to put in, as it would help attract new players to chessable. However, it can be a sensitive subject, as I don&#8217;t want the system to be abused, using random email addresses to span people with chessable invites. Somehow I&#8217;ll have to figure out a solution that allows flexibility but minimises the risk for abuse.</p>
+
+<h3 id='ranking_system__some_stats'>Ranking system &amp; some stats</h3>
+
+<p>Although chessable is designed to be played by mostly casual players, having a ranking system and some basic statistics would be a nice way for players to measure their progress. However, the problem with this is that as this is correspondence chess, there is plenty of opportunity for cheaters to abuse the system by having a computer play for them. This would be a hard problem to solve, but a very neat feature if I could add it.</p>
+
+<h3 id='redesign_some_components'>Redesign some components</h3>
+
+<p>I need to redesign the player information, and game preview panels pretty quickly. They are not good, and do not make proper use of screen space. There are other areas that I need to tidy up too, but this is an obvious one.</p>
+
+<h3 id='closing_thoughts'>Closing Thoughts</h3>
+
+<p>Overall, this weekend project ended up drawing far more of my interest than I meant for it to do. I&#8217;m definitely going to keep developing it so that it gets better and better.</p>
+
+<p>If you can create something, and still enjoy using it afterwards (despite knowing its flaws), you have done quite well.</p>
+
+<p>I am happy to say that I enjoy using chessable.</p>
+
+<p>If you like playing chess, you should <a href='https://www.chessable.co.uk'>go and try it out.</a></p>
+    
+  </div>
+
+  <div class="post-footer">
+    <p>
+      posted on 10 Mar 2012</a>
+    </p>
+  </div>
+</section>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div id="sticky-push"></div>
+        <footer>
+  <div class="container">
+    <p class="copyright">&copy; 2012 Austin Birch. Powered by 
+      <a href="http://jekyllrb.com">jekyll</a>.</p>
+  </div>
+</footer>
+
+    </div>
+
+  </div> <!-- sticky wrapper -->
+</body>
+</html>

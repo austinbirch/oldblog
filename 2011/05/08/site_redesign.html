@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Austin Birch's blog</title>
+
+  <!-- code highlighting -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/highlight.css" />
+  <script src="/javascripts/highlight.pack.js"></script>
+  <script type="text/javascript">
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <!-- typekit -->
+  <script type="text/javascript" src="//use.typekit.net/lkb2raz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <!-- my stuff -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+  <div id="sticky-wrapper">
+    <div id="body-wrapper">
+      <div class="container">
+
+        <div class="container">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">blog</a></li>
+        <li><a href="/archive">archive</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="https://twitter.com/austinbirch">twitter</a></li>
+        <li><a href="http://madebybottle.co.uk/">madebybottle</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+
+        <div class="content">
+          <div class="post-list">
+            <div class="container">
+              
+
+
+
+ <section class="post">
+  <div class="post-header">
+    <h1 class="post-title"><a href="/2011/05/08/site_redesign.html">Site Redesign</a></h1>
+  </div>
+
+  <div class="post-body">
+    
+      <div class="excerpt"><p class='update'>
+<em>Updated 13/08/2011:</em><br />
+This no longer applies, as it relates to the previous blog&rsquo;s design. Maybe I will
+write a new article about the current design later.
+</p>
+<p>I have redesigned my blog to make it simpler, less decorated, and more purposeful. What follows is a break-down of the design decisions involved.</p>
+</div><!--more-->
+<h2 id='what_is_my_blog_for'>What is my blog for?</h2>
+
+<p>The articles I want to write for my blog are longer in form, and less media intensive than many blogs. It is meant to be all about the words, so typography and legibility were very important factors in the redesign.</p>
+
+<h2 id='typography'>Typography</h2>
+
+<p>Reading longer forms of text is made more comfortable when things such as measure, typeface selection, vertical rhythm, and colour are picked carefully.</p>
+
+<p>Georgia is used as the primary typeface for everything. Visual hierarchy between type is achieved by mainly using size.</p>
+
+<p>I selected Georgia due to it&#8217;s large x-height, and therefore good legibility. I tried using some of the serif typefaces on the <a href='http://www.google.com/webfonts'>Google Web Fonts</a> library, but I did not find any that I felt produced as clear type. Georgia also has a neat advantage in that is is installed on most operating systems by default too, which helps in cross-compatibility.</p>
+
+<p>I selected a measure of around 76 characters for the main content column, which is on the high side of the widely regarded ideal measure, but I like it. It is low enough not to make line length too intimidating.</p>
+
+<p>Font sizing is achieved using a new CSS3 unit, the <a href='http://www.w3.org/TR/css3-values/#relative0'>&#8220;rem&#8221;</a>. Jonathan Snook recently wrote a very comprehensive article on its usage <a href='http://snook.ca/archives/html_and_css/font-size-with-rem'>here</a> so I will skip going into too much detail. He explains it far better than I could anyway. As a fall-back, I have declared the pixel unit first. Any browser that supports the &#8220;rem&#8221; unit, will override that first declaration.</p>
+
+<p>I have used a traditional typographical scale, and selected the header and paragraph sizes as follows (I will define the values in pixels from now on.)</p>
+
+<ul>
+<li>h1 &#8212; 36px</li>
+
+<li>h2 &#8212; 24px</li>
+
+<li>h3 &#8212; 21px</li>
+
+<li>p &#8212; 16px</li>
+</ul>
+
+<p>Selecting a base size of 16px means that I could decide upon the vertical rhythm. The vertical rhythm is defined by the baseline grid. To define the baseline grid I reset all margins and paddings, and set the leading (line-height in CSS) to define the grid.</p>
+
+<p>Any adjustments made in padding or margin need to total to a multiple of the leading. You can read up on setting type to a baseline grid on <a href='http://www.alistapart.com/articles/settingtypeontheweb/'>A List Apart</a>, where again, it would be explained better than I could do.</p>
+
+<p>I set my leading at just under 140% of my paragraph font size, to keep the numbers nice and round. 140% of 16px is 22.4px, so I&#8217;ve used 22px. Usually it pays to increase the leading with a longer measure, and to use =&gt;140% of the type size, however with the large x-height of Georgia, it seems to be fine at just under 140%.</p>
+
+<h2 id='structure'>Structure</h2>
+
+<p>The structure of the new design is simple, and allows unobtrusive reading. It is easy to know where everything is &#8212; there are only two columns!</p>
+
+<p>I used a customised version of the <a href='http://960.gs/'>960.gs</a> grid system to make it really simple to define the columns.</p>
+
+<p>I tried aligning the content to the center, but it felt like the article copy was floating too far to the right. Pushing everything to the left meant that reading longer pieces of text did not feel awkward with the introduction of too much white space.</p>
+
+<p>Keeping article headers in the first column separates them well from the article itself, and allows me to use slightly larger sub-headings in the article.</p>
+
+<p>I think I might come up with a way of keeping track of your position in the article using the space in the first column, I&#8217;m rather jealous that <a href='http://stevelosh.com/'>Steve Losh</a> has an extremely neat implementation of this &#8212; see an example on one of his <a href='http://stevelosh.com/blog/2010/09/coming-home-to-vim/'>posts</a>.</p>
+
+<h2 id='colour'>Colour</h2>
+
+<p>Colour is really simple. #333 for the type, variations on this for borders and content-separating borders. The link colour, #902a2b, is a slightly brighter version of red than the logo (#762223), to make the links a little more contrasting. I tried using the logo colour itself, but it was too hard to see amongst the copy. Hovering a link causes it to brighten slightly more to #9e2d2f, and an underline makes it further obvious.</p>
+
+<h2 id='final_thoughts'>Final thoughts</h2>
+
+<p>I am pretty happy with how it turned out, I think it does what it is meant to do, and it does it without shouting for attention. It is unobtrusive, but still pleasant.</p>
+
+<h2 id='your_thoughts'>Your thoughts</h2>
+
+<p>Let me know what you think via twitter, my username is <a href='http://twitter.com/austinbirch'>@austinbirch</a>. Aim corrections and suggestions that way too. Thanks.</p>
+    
+  </div>
+
+  <div class="post-footer">
+    <p>
+      posted on 08 May 2011</a>
+    </p>
+  </div>
+</section>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div id="sticky-push"></div>
+        <footer>
+  <div class="container">
+    <p class="copyright">&copy; 2012 Austin Birch. Powered by 
+      <a href="http://jekyllrb.com">jekyll</a>.</p>
+  </div>
+</footer>
+
+    </div>
+
+  </div> <!-- sticky wrapper -->
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Austin Birch's blog</title>
+
+  <!-- code highlighting -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/highlight.css" />
+  <script src="/javascripts/highlight.pack.js"></script>
+  <script type="text/javascript">
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <!-- typekit -->
+  <script type="text/javascript" src="//use.typekit.net/lkb2raz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <!-- my stuff -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+  <div id="sticky-wrapper">
+    <div id="body-wrapper">
+      <div class="container">
+
+        <div class="container">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">blog</a></li>
+        <li><a href="/archive">archive</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="https://twitter.com/austinbirch">twitter</a></li>
+        <li><a href="http://madebybottle.co.uk/">madebybottle</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+
+        <div class="content">
+          <div class="post-list">
+            <div class="container">
+              
+
+
+
+ <section class="post">
+  <div class="post-header">
+    <h1 class="post-title"><a href="/2011/08/24/ludum-postmortem.html">Ludum Postmortem</a></h1>
+  </div>
+
+  <div class="post-body">
+    
+      <div class="excerpt"><p>Last weekend I took part, for the first time, in <a href='http://ludumdare.com'>Ludum Dare</a>, a competition in which you have <strong>48</strong> hours to create a game from scratch. I&#8217;ll be doing the next one too.</p>
+
+<p>I don&#8217;t usually make games, but I enjoyed the challenge. As Rails 3.1 will use <a href='http://coffeescript.org/'>CoffeeScript</a> by default, I thought it would be the perfect change to get to know it a bit better.</p>
+</div><!--more-->
+<h2 id='what_did_i_make'>What did I make?</h2>
+
+<p>Each Ludum Dare has its own theme, and the theme for Ludum Dare 21 was &#8220;Escape.&#8221; I made a game called <em>65-73-63</em>, which is &#8220;esc&#8221; in hex (utf-8).</p>
+
+<p>I initially designed it to be a traditional 2D side scrller, but with a small twist. The twist being that you did not control the player, but instead you are in control of the environment. You would operate a series of bridges, doors, and boosters to help the protaganist, Tom, escape from a series of overgrown Earth Bees that were chasing him. How the game turned out was a bit different.</p>
+
+<p>Here&#8217;s a list of the main features I wanted to include:</p>
+
+<ul>
+<li>An array of different objects to control, including doors, bridges, launchers, and boosters.</li>
+
+<li>Random level generation, so that the game would be endless.</li>
+
+<li>Very basic, blocky art. Simple is nice sometimes.</li>
+
+<li>A simple scoring system, which reflected how far you had managed to get.</li>
+</ul>
+
+<h2 id='what_did_it_end_up_like'>What did it end up like?</h2>
+
+<p><em>65-73-63</em> ended up half the game I imagined it to be. For a few reasons, I used up all of my time.</p>
+
+<p>One of the things that annoyed me most was the the final submissing only included bridges to operate. This made the game far more boring than originally intended. I still think the idea was good, and I will finish adding the parts that did not make it later. I also never got around to implementing the random level generation, which was to be another important feature. Random level generation meant the level could be endless, making it a <a href='http://www.canabalt.com/'>canabalt</a>-style dash-until-death game.</p>
+
+<h2 id='things_that_slowed_me_down'>Things that slowed me down</h2>
+
+<p>I started it half a day late, as I didn&#8217;t realise it was that weekend.</p>
+
+<p>Learning CoffeeScript at the same time definitely made things take much longer, especially at the beginning.</p>
+
+<p>Not having software that I needed installed, and then trying to download it and my connection dying. This was very annoying, but, these things happen.</p>
+
+<h2 id='things_i_maybe_should_have_done_differently'>Things I, maybe, should have done differently</h2>
+
+<p>I should have been more prepared, which would have meant knowing that it was on, and having the right stuff installed.</p>
+
+<p>I used this as an opportunity to learn some CoffeeScript, if I wanted to make the best of the time, I should have stuck to things I already knew.</p>
+
+<h2 id='thoughts_on_coffeescript'>Thoughts on CoffeeScript</h2>
+
+<p>It is so great that I never want to use plain JavaScript again. Ever. The syntax is very concise, which works really well. I love the use of indentation rather than symbols such as braces. The addition of simple Class structures make things much easier (though you have to be careful when splitting your code into multiple files, CoffeeScript wraps each one in an anonymous function.)</p>
+
+<h2 id='where_to_play_it_and_screenshots'>Where to play it, and screenshots</h2>
+
+<p>You can play <em>65-73-63</em> <a href='http://austinbirch.co.uk/65-73-63/'>here</a>, and that is where I keep the most updated version.</p>
+
+<p><img src='/assets/img/65-73-63-start.png' alt='start' /> <img src='/assets/img/65-73-63-jump.png' alt='jump' /></p>
+
+<h2 id='end'>End</h2>
+
+<p>Hopefully I will be better prepared for the next one, and let’s hope that I learn from the mistakes I made this time round.</p>
+
+<p>The end of a fun, but a bit exhausting weekend. : )</p>
+    
+  </div>
+
+  <div class="post-footer">
+    <p>
+      posted on 24 Aug 2011</a>
+    </p>
+  </div>
+</section>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div id="sticky-push"></div>
+        <footer>
+  <div class="container">
+    <p class="copyright">&copy; 2012 Austin Birch. Powered by 
+      <a href="http://jekyllrb.com">jekyll</a>.</p>
+  </div>
+</footer>
+
+    </div>
+
+  </div> <!-- sticky wrapper -->
+</body>
+</html>

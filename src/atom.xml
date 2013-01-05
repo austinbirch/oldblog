@@ -13,7 +13,7 @@ layout: nil
     <email>hello@austinbirch.co.uk</email>
   </author>
 
-  {% for post in site.posts %}
+  {% for post in site.posts limit:20 %}
   <entry>
     <id>http://austinbirch.co.uk{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="http://austinbirch.co.uk{{ post.url }}"/>

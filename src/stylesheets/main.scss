@@ -59,7 +59,7 @@ html {
 body {
   background-color: $background-color;
   color: $text-color;
-  font-family: serif;
+  font-family: $body-font-family;
   font-size: ((100%/16)*$base-font-size);
 
   // comment this out to hide baseline grid

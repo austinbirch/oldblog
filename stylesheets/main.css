@@ -140,8 +140,9 @@ footer {
     display: inline; }
     .profile .about p {
       font-size: 0.88889em; }
-    .profile .about .hire-me-maybe {
-      font-weight: 600; }
+
+.hire-me-maybe {
+  font-weight: 600; }
 
 .post-list .post:first-child {
   border-top: none;

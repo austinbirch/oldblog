@@ -15,9 +15,9 @@ body {
   font-size: 112.5%; }
 
 a {
-  color: #4a897b; }
+  color: #48a58d; }
   a:hover {
-    color: #5ea898; }
+    color: #64bca5; }
 
 .small, figure figcaption, header nav ul li, footer p, .post .post-footer p {
   font-size: 0.88889em;
@@ -76,8 +76,8 @@ figure {
     font-style: italic; }
 
 #body-wrapper {
-  border-top: solid rgba(65, 120, 108, 0.66);
-  border-bottom: solid rgba(65, 120, 108, 0.66);
+  border-top: solid rgba(64, 147, 126, 0.66);
+  border-bottom: solid rgba(64, 147, 126, 0.66);
   border-width: 0.35em;
   padding: 1.4em 1.5em; }
 
@@ -163,7 +163,7 @@ footer {
         color: #111111; }
         .post .post-header .post-title a:hover {
           text-decoration: underline;
-          color: #5ea898; }
+          color: #64bca5; }
   .post .post-body h2 {
     margin-top: 1.93846em; }
   .post .post-body h3 {
@@ -172,7 +172,7 @@ footer {
     padding-left: 2em;
     list-style-type: disc; }
   .post .post-body .aside {
-    border-left: 4px solid #4a897b; }
+    border-left: 4px solid #48a58d; }
     .post .post-body .aside p {
       padding-top: 0.7em;
       padding-bottom: 0.7em;

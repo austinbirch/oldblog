@@ -38,7 +38,7 @@ write plugins that extend the functionality of the application.
 
 The more plugins there are, the harder it is to change the plugin system.
 The more complicated the plugin system is, the harder it is to write plugins
-that interact well with the application and.
+that interact well with the application.
 
 ## Modules
 
@@ -61,7 +61,7 @@ is much better than using none at all.
 ## Options for application structure
 
 There are many different approaches that you can take, and mine is a
-combination of different methods (especially the mediator and facade patterns)
+combination of different patterns (especially the mediator and facade)
 that I have read about and explored with test projects.
 
 A good place to start reading upon the different options would be any of the
@@ -82,20 +82,25 @@ instead just follow the ideas and concepts of the design patterns that fit the
 problem more naturally.
 
 It is especially important to think of the problems that are specific in your
-problem domain, and to think about the best ways in which those problems can
-be solved &mdash; sometimes you need a little of this pattern, and a bit of
-another.
+applications domain, and to think about the best ways in which those problems
+can be solved &mdash; sometimes you need a little of this pattern, and a bit
+of another.
 
-For BottleCRM, the biggest problem I have to solve, in regards to application structure, is the plugin system.
+For BottleCRM, the biggest problem I have to solve, in regards to application
+structure, is the plugin system.
 
-Implementing a plugin system, and the ideas in which it represents
-(the ability for other developers to hook in their own code and
-customisations), usually involves quite complicated APIs, interfaces
-and other connecting parts. This can be quite troublesome to maintain,
-especially when you are just starting out, as plugin developer requirements,
-and the functionality that plugins should be able to achieve, may change in
-the future. This is especially true early-on, when ideas are still relatively
-untested, and direction is not as solid as it will be later on.
+Implementing a plugin system, and the ideas that it represents (the ability
+for other developers to hook in their own code and customisations), usually
+involves quite complicated APIs, interfaces, and other connecting parts. This
+can be quite troublesome to maintain, due to the large surface area of the
+code.
+
+As requirements of the plugin system change, changing it can be hard due to
+the amount of code that has already been written to interact with it.
+Enforcing backwards-compatibility is not an easy thing to do, especially as
+early on in the software development process the direction that the plugin
+system will take (in terms of what plugin developers will want to be able to
+achieve) is relatively unknown.
 
 In order to remove the complexity that is usually involved in a plugin system,
 I decided to not really have one. Though this sounds counter-intuitive, for
@@ -142,39 +147,41 @@ The parts are:
 
 ### Pub/sub
 
-The traditional *publish/subscribe* system, where components can
+A traditional *publish/subscribe* system that allows components to
 <span class="monospace">subscribe</span> to events (by name), and other
-components can <span class="monospace">publish</span> events. The events can
-have extra data associated with them that describe what happened.
+components to <span class="monospace">publish</span> events. The events can
+have extra data associated with them that provide context and describe what
+occurred.
 
 Components that <span class="monospace">subscribe</span> to events are called
 *consumers*, and components that <span class="monospace">publish</span> events
 are *producers*.
 
 In BottleCRM, for the most part, events are used to describe things that
-have happened, so that multiple consumers can react to a change in application
+have happened so that multiple consumers can react to a change in application
 state. An example of this may be to load extra data when a
 <span class="monospace">signin:success</span> event is published.
 
 ### The message queue
 
-components can register to <span class="monospace">handle</span> messages, and other
-components can <span class="monospace">enqueue</span> them. When you enqueue
-a message, the last component to register a handler for that message name will
-have its handler called. Messages will often contain other parameters that
-the handler should use to perform its work.
+components can register to <span class="monospace">handle</span> messages,
+and other components can <span class="monospace">enqueue</span> them. When
+you enqueue a message, the last component to register a handler for that
+message name will have its handler called. Messages will often contain
+other parameters that the handler should use to perform its work.
 
-Handler functions can allow the message to be passed to any previous handler that
-was registered if it would like to, allowing interception
-and modification of messages.
+Handler functions can allow the message to be passed to any previous handler
+that was registered if it would like to, allowing interception and
+modification of messages.
 
 A parameter that will often be passed as part of a message will be a callback
-function. For example, we might enqueue a database call, to find all of users
+function. For example, we might enqueue a database call to find all of users
 in the system. A callback function would be supplied along with the message
 for the handler to call with the result.
 
 This sort of messaging is used to expose all of the functionality that a plugin
-provides to the system. A short list of examples would look like this:
+provides to the system. A short list of examples from BottleCRM would
+look like this:
 
 - View creation
 - Building models
@@ -235,11 +242,11 @@ developers that are not familiar with the codebase to get used to it.
 
 I have found, however, that this style of code forces you to think about
 what happens when some work you request is not performed, or takes a long time
-to complete. For example, when requesting data from a remote database, you may
+to complete. For example, when requesting data from a remote database you may
 wish to render a view that shows that you are loading some data. This is,
 mostly, a nice trait that is forced by this no-guarantees approach.
 
-Rather than defining that you cannot run without another plugin being enabled,
+Rather than defining that you cannot run without another plugin being enabled
 (expressing a dependency on that plugin), you must handle the case that the
 work you requested might not be completed. It might be that you just do
 nothing (roughly the same as if your plugin has refused to load), however you

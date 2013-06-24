@@ -2,7 +2,7 @@
 title: "Indie Game: The Movie"
 layout: post
 ---
-I finally got around to watching **Indie Game: The Move** today, and it was very, very
+I finally got around to watching **Indie Game: The Movie** today, and it was very, very
 good. One of my favourite documentary films, along with
 [Objectified](http://www.objectifiedfilm.com/) and
 [Helvetica](http://www.helveticafilm.com/).

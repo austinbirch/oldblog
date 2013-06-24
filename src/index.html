@@ -2,6 +2,9 @@
 layout: default
 title: home
 ---
+
+{% include profile.html %}
+
 {% assign excerpt = true %}
 {% for post in site.posts %}
   {% include post.html %}

@@ -7,11 +7,11 @@
 // VARIABLES
 
 // type settings
-$header-font-family: "minion-pro", serif;
+$header-font-family: myriad-pro, sans-serif;
 $body-font-family: $header-font-family;
 
-$base-font-size: 21;
-$small-font-size: 18;
+$base-font-size: 18;
+$small-font-size: 16;
 
 $h1-size: 34;
 $h2-size: 26;
@@ -19,16 +19,16 @@ $h3-size: 21;
 $baseline: ($base-font-size * 1.4);
 
 // layout settings
-$max-container-width: 600px;
+$max-container-width: 560px;
 $footer-height: ($baseline * 5);
 
 // color settings
 $background-color: #fdfdfd;
 $text-color: #111;
-$primary: #933;
-$primary: #a03a2c;
-$primary: #52527a;
-$primary: #9b1722;
+$primary: #4A897B;
+
+$light-gray: #CDD4D2;
+$dark-gray: #ADB3B1;
 
 $link-color: $text-color;
 $link-color: $primary;
@@ -88,7 +88,6 @@ h1, h2, h3 {
   font-family: $header-font-family;
   color: $text-color;
   font-weight: 600;
-  text-align: center;
 }
 
 h1 {
@@ -120,17 +119,17 @@ li li {
 }
 
 // responsive changes for base type size
-@media screen and (max-width: 688px) {
-  body {
-    font-size: ((100%/16)*19);
-  }
-}
+// @media screen and (max-width: 688px) {
+//   body {
+//     font-size: ((100%/16)*19);
+//   }
+// }
 
-@media screen and (max-width: 601px) {
-  body {
-    font-size: ((100%/16)*17);
-  }
-}
+// @media screen and (max-width: 601px) {
+//   body {
+//     font-size: ((100%/16)*17);
+//   }
+// }
 
 img,
 object,
@@ -162,7 +161,8 @@ figure {
 // LAYOUT STYLES
 #body-wrapper {
   $wrapper-color: rgba((darken($primary, 5%)), 0.66);
-  border: solid $wrapper-color;
+  border-top: solid $wrapper-color;
+  border-bottom: solid $wrapper-color;
   border-width: pte(($baseline/4), $base-font-size);
   padding: pte($baseline, $base-font-size) pte(($base-font-size*1.5), $base-font-size);
 }
@@ -174,7 +174,7 @@ figure {
 }
 
 header {
-  border-bottom: 1px solid lighten($text-color, 80%);
+  border-bottom: 1px solid $light-gray;
   margin-bottom: pte(($baseline - 1), $base-font-size);
 
   nav {
@@ -198,6 +198,7 @@ header {
   margin-top: pte($baseline, $base-font-size);
 
   .section-title {
+    text-align: center;
     margin-bottom: pte($baseline, $base-font-size);
   }
 
@@ -224,13 +225,45 @@ footer {
 .monospace {
   font-family: "Monaco", monospace;
   font-size: 0.7em;
-  background-color: #eee;
+  background-color: darken($light-gray, 11%);
   padding: 0.2em 0.4em;
 }
 
 .center-list {
   li {
     text-align: center;
+  }
+}
+
+.post-profile .profile {
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  padding-top: pte($baseline, $base-font-size);
+}
+
+.profile {
+  margin-bottom: pte($baseline, $base-font-size);
+
+  .profile-image {
+    float: left;
+    margin-right: pte($base-font-size, $base-font-size);
+
+    img {
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  .about {
+    display: inline;
+
+    p {
+      font-size: pte($small-font-size, $base-font-size);
+    }
+
+    .hire-me-maybe {
+      font-weight: 600;
+    }
   }
 }
 
@@ -244,14 +277,15 @@ footer {
 .post {
   padding-top: pte(($baseline * 2), $base-font-size);
   padding-bottom: pte((($baseline * 2) - 1), $base-font-size);
-  border-top: 1px solid lighten($text-color, 80%);
+  border-top: 1px solid $light-gray;
 
   .post-header {
-    padding: 0 0 pte($baseline, $base-font-size);
+    padding: 0 0 pte($baseline*2, $base-font-size);
 
     .post-title {
       margin: 0;
       line-height: 100%;
+      text-align: center;
 
       a {
         text-decoration: none;
@@ -266,16 +300,31 @@ footer {
   }
 
   .post-body {
-    h1, h2, h3 {
-      text-align: center;
+    h2 {
+      margin-top: pte(($baseline * 2), $h2-size);
+    }
+
+    h3 {
+      margin-top: pte(($baseline * 2), $h3-size);
     }
 
     ul, ol {
       padding-left: pte(($base-font-size*2), $base-font-size);
       list-style-type: disc;
     }
+
     .excerpt p {
       // not sure what I want to do here
+    }
+
+    .aside {
+      border-left: 4px solid $primary;
+
+      p {
+        padding-top: pte(($baseline/2), $base-font-size);
+        padding-bottom: pte(($baseline/2), $base-font-size);
+        padding-left: pte($baseline, $base-font-size);
+      }
     }
 
     .read-more {
@@ -297,7 +346,8 @@ footer {
   .post-footer {
     p {
       @extend .small;
-      color: lighten($text-color, 50%);
+      // color: lighten($text-color, 50%);
+      color: $dark-gray;
       font-style: italic;
       margin-bottom: 0;
       text-align: right;

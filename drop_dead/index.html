@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>drop_dead - a multiplayer HTML5 game</title>
+	<link rel="stylesheet" href="stylesheets/main.css" />
+	<script type="text/javascript" src="js/jquery/jquery.js"></script> 
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/Game.js"></script>
+	<script type="text/javascript" src="js/RunnerPlayer.js"></script>
+	<script type="text/javascript" src="js/BlockPlayer.js"></script>
+	<script type="text/javascript" src="js/Block.js"></script>
+	<script type="text/javascript" src="js/Vector.js"></script>
+	<script type="text/javascript" src="js/Rect.js"></script>
+	<script type="text/javascript" src="js/Floor.js"></script>
+	<script type="text/javascript" src="js/Background.js"></script>
+	<script type="text/javascript" src="js/AI.js"></script>
+	<script type="text/javascript" src="js/ImageManager.js"></script>
+	<script type="text/javascript" src="js/SpriteSheet.js"></script>
+	<script type="text/javascript" src="js/Animation.js"></script>
+	
+	<script>
+	
+		$.get("RECENT_CHANGES", function(data){
+			$("#changes").append(data);
+		});
+		
+		$.get("THINGS", function(data){
+			$("#things").append(data);
+		});
+			
+	</script>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-17945991-6']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div id="title">
+			<h3>drop_dead</h3>
+			<p class="small_text">by <a href="http://www.twitter.com/austinbirch">Austin Birch</a></p>
+		</div>
+			<div id="canvas_wrapper">
+				<canvas id="canvas">
+
+				</canvas>
+			</div>			
+			<div id="about">
+				<p>Runner – <strong>arrows</strong> to move, <strong>space</strong> to jump.</p>
+				<p>Dropper – <strong>A</strong> and <strong>D</strong> to move, <strong>S</strong> to fire blocks. Once dead, press <strong>R</strong> to restart.</p>
+				<p>Press <strong>C</strong> to enable/disable AI player</p>
+			</div><!-- #about -->
+			
+			<div id="recent_changes">
+				<h3>Recent Changes</h3><p><em>(these may not load in Chrome yet.)</em></p>
+				<pre id="changes"></pre>
+			</div>
+			
+			<div id="things">
+				<h3>Things to do, plus other information</h3>
+			</div>
+	</div><!-- #wrapper -->
+</body>
+</html>

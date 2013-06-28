@@ -1,0 +1,61 @@
+@import ("reset.css");
+
+body {
+	background-color: #fff;
+	margin: 0;
+	font-family: "Monaco", "Courier", monospace;
+}
+
+#title {
+	font: 24px/100% "Monaco", "Courier", monospace;
+	padding-bottom: 9px;
+}
+
+#wrapper {
+	margin: 20px auto;
+	width: 800px;
+}
+
+#about {
+	
+}
+
+#canvas_wrapper {
+	width: 800px;
+	height: 500px;
+}
+
+#recent_changes {
+	margin-top: 18px;
+	margin-bottom: 18px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	border-top: 1px solid #333;
+}
+
+#things { 
+	border-top: 1px solid #333;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+#changes {
+	white-space: pre-wrap;
+}
+
+#canvas {
+	display: none;
+}
+
+p {font: 13px/18px "Courier", monospace; }
+p.complete { text-decoration: line-through; }
+h3 { margin: 0em; }
+.small_text { font-size: 10px; }
+
+a { color: #8e0020; text-decoration: none; }
+a:hover { color: #f9f9f9; background-color: #8e0020; }
+
+ul { list-style: none; }
+li { padding-left: 9px; }

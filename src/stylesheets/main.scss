@@ -35,13 +35,14 @@ $primary: #48A58D;
 // blue
 $primary: #1F5F9A;
 $primary: #236BAE;
+$primary: #4F7CB0;
 
 $light-gray: #CDD4D2;
 $dark-gray: #ADB3B1;
 
 $link-color: $text-color;
 $link-color: $primary;
-$link-active-color: lighten($primary, 10%);
+$link-active-color: lighten($primary, 5%);
 
 // SCSS UTILITIES
 //
@@ -169,7 +170,7 @@ figure {
 //
 // LAYOUT STYLES
 #body-wrapper {
-  $wrapper-color: rgba((darken($primary, 5%)), 0.66);
+  $wrapper-color: rgba($primary, 0.8);
   border-top: solid $wrapper-color;
   border-bottom: solid $wrapper-color;
   border-width: pte(($baseline/4), $base-font-size);

@@ -428,7 +428,19 @@ footer {
 }
 
 // CV PAGE
+@page { 
+  margin-top: 1cm;
+
+  counter-increment: page;
+  counter-reset: page 1;
+  @top-right {
+      content: "Page " counter(page) " of " counter(pages);
+  }
+}
+
 @media print {
+  $print-font: helvetica, sans-serif !important;
+
   #sticky-push {
     display: none !important;
   }
@@ -437,18 +449,16 @@ footer {
     font-size: 12px !important;
     line-height: 16px !important;
     margin-bottom: 16px !important;
-    font-family: "Helvetica Neue";
+    font-family: $print-font;
   }
-
-  @page { margin-top: 2cm }
 
   .typekit-badge {
     display: none !important;
   }
 
   h1, h2, h3, h4 {
-    color: darken($primary, 15%) !important;
-    font-family: "Helvetica Neue";
+    color: darken($primary, 17%) !important;
+    font-family: $print-font;
   }
 
   a {
@@ -457,30 +467,35 @@ footer {
 
   h1 {
     font-size: 22px !important;
-    line-height: 22px !important;
+    line-height: 16px !important;
     margin-bottom: 16px !important;
   }
 
   h2 {
     font-size: 16px !important;
     line-height: 16px !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 15px !important;
     border-bottom: 1px solid $dark-gray !important;
   }
 
   h3 {
     font-size: 14px !important;
-    line-height: 14px !important;
+    line-height: 16px !important;
     margin-bottom: 16px !important;
   }
 
   h4 {
     font-size: 12px !important;
     margin-bottom: 16px !important;
-    line-height: 12px !important;
+    line-height: 16px !important;
+  }
+
+  ul, ol {
+    margin-bottom: 16px !important;
   }
 
   li {
+    font-family: $print-font;
     font-size: 12px !important;
     line-height: 16px !important;
 
@@ -498,8 +513,8 @@ footer {
     display: none;
   }
 
-  h2[name="interests"] {
-    page-break-before: always;
+  .page-break {
+    page-break-before: always !important;
   }
 }
 

@@ -64,7 +64,7 @@ Responsibilities:
 
 ### Previous Employment
 
-Homebase, **February 2007 - June 2007
+Homebase, **February 2007 - June 2007**
 
 <div class="page-break"></div>
 

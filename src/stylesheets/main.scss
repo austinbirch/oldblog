@@ -16,6 +16,7 @@ $small-font-size: 16;
 $h1-size: 34;
 $h2-size: 26;
 $h3-size: 21;
+$h4-size: $base-font-size;
 $baseline: ($base-font-size * 1.4);
 
 // layout settings
@@ -169,13 +170,13 @@ figure {
 
 //
 // LAYOUT STYLES
-#body-wrapper {
-  $wrapper-color: rgba($primary, 0.8);
-  border-top: solid $wrapper-color;
-  border-bottom: solid $wrapper-color;
-  border-width: pte(($baseline/4), $base-font-size);
-  padding: pte($baseline, $base-font-size) pte(($base-font-size*1.5), $base-font-size);
-}
+/*#body-wrapper {*/
+  /*$wrapper-color: rgba($primary, 0.8);*/
+  /*border-top: solid $wrapper-color;*/
+  /*border-bottom: solid $wrapper-color;*/
+  /*border-width: pte(($baseline/4), $base-font-size);*/
+  /*padding: pte($baseline, $base-font-size) pte(($base-font-size*1.5), $base-font-size);*/
+/*}*/
 
 .container {
   margin: 0 auto;
@@ -186,6 +187,7 @@ figure {
 header {
   border-bottom: 1px solid $light-gray;
   margin-bottom: pte(($baseline - 1), $base-font-size);
+  padding-top: pte($baseline, $base-font-size);
 
   nav {
     ul {
@@ -362,6 +364,142 @@ footer {
       margin-bottom: 0;
       text-align: right;
     }
+  }
+}
+
+.cv {
+  $cv-font-size: 16;
+  $cv-h1-size: 26;
+  $cv-h2-size: 21;
+  $cv-h3-size: 18;
+  $cv-h4-size: $cv-font-size;
+    
+  p {
+    font-size: 16px; // 16px for cv page
+    line-height: pte($baseline, $cv-font-size);
+    margin-bottom: pte($baseline, $cv-font-size);
+  }
+
+  h1, h2, h3 {
+    font-family: $header-font-family;
+    color: $text-color;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: pte($cv-h1-size, $cv-font-size);
+    line-height: pte($baseline, $h1-size);
+    margin-bottom: pte($baseline, $h1-size);
+  }
+
+  h2 {
+    font-size: pte($cv-h2-size, $cv-font-size);
+    line-height: pte($baseline, $h2-size);
+    margin-bottom: pte($baseline, $h2-size);
+    font-style: normal;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  h3 {
+    font-size: pte($cv-h3-size, $cv-font-size);
+    line-height: pte($baseline, $h3-size);
+    margin-bottom: pte($baseline, $h3-size);
+  }
+
+  h4 {
+    font-size: pte($cv-h4-size, $cv-font-size);
+    margin-bottom: pte($cv-h4-size, $baseline);
+  }
+
+  ul, ol {
+    margin-bottom: pte($baseline, $cv-font-size);
+    line-height: pte($baseline, $cv-font-size);
+    list-style: none;
+  }
+  li { font-size: 16px; }
+  li li {
+    font-size: 16px;
+  }
+
+  ul, ol {
+  list-style-type: disc;
+  margin-left: 2em;
+  }
+}
+
+// CV PAGE
+@media print {
+  #sticky-push {
+    display: none !important;
+  }
+
+  p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    margin-bottom: 16px !important;
+    font-family: "Helvetica Neue";
+  }
+
+  @page { margin-top: 2cm }
+
+  .typekit-badge {
+    display: none !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: darken($primary, 15%) !important;
+    font-family: "Helvetica Neue";
+  }
+
+  a {
+    color: $text-color !important;
+  }
+
+  h1 {
+    font-size: 22px !important;
+    line-height: 22px !important;
+    margin-bottom: 16px !important;
+  }
+
+  h2 {
+    font-size: 16px !important;
+    line-height: 16px !important;
+    margin-bottom: 8px !important;
+    border-bottom: 1px solid $dark-gray !important;
+  }
+
+  h3 {
+    font-size: 14px !important;
+    line-height: 14px !important;
+    margin-bottom: 16px !important;
+  }
+
+  h4 {
+    font-size: 12px !important;
+    margin-bottom: 16px !important;
+    line-height: 12px !important;
+  }
+
+  li {
+    font-size: 12px !important;
+    line-height: 16px !important;
+
+    li {
+      font-size: 12px !important;
+      line-height: 16px !important;
+    }
+  }
+
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  h2[name="interests"] {
+    page-break-before: always;
   }
 }
 

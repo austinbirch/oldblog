@@ -1,7 +1,3 @@
----
-layout: cv
-permalink: cv/
----
 # Austin Birch
 
 30 Tern Walk  

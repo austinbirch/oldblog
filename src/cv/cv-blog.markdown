@@ -104,11 +104,6 @@ Notable examples:
   - A HTML5 Canvas game using JavaScript to power the logic, and the HTML5
   Canvas drawing API to render the game.
 
-- **65-73-63** (Source code:
-  [https://github.com/austinbirch/65-73-63](https://github.com/austinbirch/65-73-63))
-  - A Ludum Dare game competition entry, in which participants are required to
-  make a game from scratch in 48 hours.
-
 - Wrote the beginnings of an iOS app in C++. The application required a custom 
   volumetric rendering engine that leveraged OpenGL for performance.
 
@@ -131,8 +126,6 @@ guitar, flying, and socialising with friends.
 - Mathematics – D
 - General Studies – C
 - Physics – C
-
-<div class="page-break"></div>
 
 #### Miltoncross School, September 2001 – June 2006
 

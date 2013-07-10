@@ -82,6 +82,9 @@ figure {
 /*border-width: pte(($baseline/4), $base-font-size);*/
 /*padding: pte($baseline, $base-font-size) pte(($base-font-size*1.5), $base-font-size);*/
 /*}*/
+#body-wrapper {
+  padding: 1.4em 1.5em 0; }
+
 .container {
   margin: 0 auto;
   max-width: 560px;
@@ -89,8 +92,7 @@ figure {
 
 header {
   border-bottom: 1px solid #cdd4d2;
-  margin-bottom: 1.34444em;
-  padding-top: 1.4em; }
+  margin-bottom: 1.34444em; }
   header nav ul {
     text-align: center; }
     header nav ul li {
@@ -244,8 +246,8 @@ footer {
 
   p {
     font-size: 12px !important;
-    line-height: 16px !important;
-    margin-bottom: 16px !important;
+    line-height: 14px !important;
+    margin-bottom: 14px !important;
     font-family: helvetica, sans-serif !important; }
 
   .typekit-badge {
@@ -260,35 +262,39 @@ footer {
 
   h1 {
     font-size: 22px !important;
-    line-height: 16px !important;
-    margin-bottom: 16px !important; }
+    line-height: 14px !important;
+    margin-bottom: 14px !important; }
 
   h2 {
     font-size: 16px !important;
-    line-height: 16px !important;
-    margin-bottom: 15px !important;
+    line-height: 14px !important;
+    margin-bottom: 14px !important;
     border-bottom: 1px solid #adb3b1 !important; }
 
   h3 {
     font-size: 14px !important;
-    line-height: 16px !important;
-    margin-bottom: 16px !important; }
+    line-height: 14px !important;
+    margin-bottom: 14px !important; }
 
   h4 {
     font-size: 12px !important;
-    margin-bottom: 16px !important;
-    line-height: 16px !important; }
+    margin-bottom: 14px !important;
+    line-height: 14px !important; }
 
   ul, ol {
-    margin-bottom: 16px !important; }
+    /*margin-top: -7px !important;*/
+    margin-bottom: 14px !important; }
+
+  p + ul {
+    margin-top: -7px; }
 
   li {
     font-family: helvetica, sans-serif !important;
     font-size: 12px !important;
-    line-height: 16px !important; }
+    line-height: 14px !important; }
     li li {
       font-size: 12px !important;
-      line-height: 16px !important; }
+      line-height: 14px !important; }
 
   header {
     display: none; }

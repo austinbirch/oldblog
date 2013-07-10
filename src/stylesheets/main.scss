@@ -47,7 +47,7 @@ $link-active-color: lighten($primary, 5%);
 
 // SCSS UTILITIES
 //
-@function pte($target, $context) {
+@function pte($target, $context: $base-font-size) {
   @return (($target/$context) + 0em);
 }
 
@@ -178,6 +178,10 @@ figure {
   /*padding: pte($baseline, $base-font-size) pte(($base-font-size*1.5), $base-font-size);*/
 /*}*/
 
+#body-wrapper {
+  padding: pte($baseline) pte(($base-font-size * 1.5)) 0;
+}
+
 .container {
   margin: 0 auto;
   max-width: $max-container-width;
@@ -187,7 +191,6 @@ figure {
 header {
   border-bottom: 1px solid $light-gray;
   margin-bottom: pte(($baseline - 1), $base-font-size);
-  padding-top: pte($baseline, $base-font-size);
 
   nav {
     ul {

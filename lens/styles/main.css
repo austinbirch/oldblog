@@ -75,19 +75,19 @@ ol {
  *   - on a non-retina device, the thumbnails will be requested, and non-retina
  *     versions of images that are viewed.
  */
-.lens-image[data-image="../images/image01.jpg"] {
+.lens-image[data-image="images/image01.jpg"] {
   background-image: url("../images/image01.jpg");
 }
 
-.lens-image[data-image="../images/image02.jpg"] {
+.lens-image[data-image="images/image02.jpg"] {
   background-image: url("../images/image02.jpg");
 }
 
-.lens-image[data-image="../images/image03.jpg"] {
+.lens-image[data-image="images/image03.jpg"] {
   background-image: url("../images/image03.jpg");
 }
 
-.lens-image[data-image="../images/image04.jpg"] {
+.lens-image[data-image="images/image04.jpg"] {
   background-image: url("../images/image04.jpg");
 }
 

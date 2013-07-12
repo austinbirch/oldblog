@@ -3,9 +3,7 @@
   var defaults = {
     thumbnailOpacity: 0.3,
     thumbnailPath: function(path) {
-      var repl = path.replace('.jpg', '-thumb.jpg');
-      console.log(repl);
-      return repl;
+      return path.replace('.jpg', '-thumb.jpg');
     },
     retinaPath: function(path) {
       return path.replace('.jpg', '@2x.jpg');

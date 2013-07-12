@@ -1,0 +1,29 @@
+.lens-thumbnail-container {
+  margin-bottom: 1em;
+}
+
+.lens-image {
+  background-size: contain;
+}
+
+/* when we are at normal resolution, only show non-retina images */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1),
+only screen and (min-resolution: 96dpi) {
+  .lens-gallery .lens-image-container .lens-retina-wrapper {
+    display: none;
+  }
+}
+
+/* when we are at normal resolution, only show retina images */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+  .lens-gallery .lens-image-container .lens-standard-wrapper {
+    display: none;
+  }
+
+  .lens-gallery .lens-image-container .lens-retina-wrapper {
+    display: block !important;
+  }
+}

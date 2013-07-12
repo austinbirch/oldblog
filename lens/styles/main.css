@@ -1,0 +1,93 @@
+/* basic reset for the demo */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 100%;
+  padding: 1em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em; /* 24/16 */
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-size: 1.5em; /* 24/16 */
+  line-height: 1em; /* 24/24 */
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.3125em; /* 21/16 */
+  line-height: 1.142em; /* 24/21 */
+  margin: 0.571em 0;
+}
+
+ol {
+  list-style-type: none;
+}
+
+.lens-gallery {
+  margin-bottom: 1.5em;
+  max-width: 800px;
+}
+
+.lens-image {
+  width: 800px;
+  height: 534px;
+}
+
+.lens-image-container {
+  margin-bottom: 1.5em;
+}
+
+.lens-image-container figcaption {
+  background-color: #eee;
+  line-height: 1.5em;
+  padding: 0 1em;
+  font-size: 0.875em; /* 14/16 */
+}
+
+/* the below will have the effect of falling back to a vertical sequence of
+ * images if JavaScript is disabled. However, if you do not enable this
+ * fallback, then only the images required will be requested. For example:
+ *
+ * without fallback:
+ *   - on a retina device, the thumbnails will be requested, and only the retina
+ *     images that are viewed.
+ *
+ *   - on a non-retina device, the thumbnails will be requested, and only
+ *     non-retina images that are viewed.
+ *
+ * with fallback:
+ *   - on a retina device, the thumbnails and all of the non-retina images will
+ *     be requested, as well as any retina versions for any images that are
+ *     viewed.
+ *   - on a non-retina device, the thumbnails will be requested, and non-retina
+ *     versions of images that are viewed.
+ */
+.lens-image[data-image="../images/image01.jpg"] {
+  background-image: url("../images/image01.jpg");
+}
+
+.lens-image[data-image="../images/image02.jpg"] {
+  background-image: url("../images/image02.jpg");
+}
+
+.lens-image[data-image="../images/image03.jpg"] {
+  background-image: url("../images/image03.jpg");
+}
+
+.lens-image[data-image="../images/image04.jpg"] {
+  background-image: url("../images/image04.jpg");
+}
+

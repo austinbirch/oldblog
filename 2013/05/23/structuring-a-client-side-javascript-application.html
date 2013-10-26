@@ -160,7 +160,7 @@ technical, and include examples) about specifics later.
 
 <h3 id='the_message_queue'>The message queue</h3>
 
-<p>components can register to <span class='monospace'>handle</span> messages, and other components can <span class='monospace'>enqueue</span> them. When you enqueue a message, the last component to register a handler for that message name will have its handler called. Messages will often contain other parameters that the handler should use to perform its work.</p>
+<p>Components can register to <span class='monospace'>handle</span> messages, and other components can <span class='monospace'>enqueue</span> them. When you enqueue a message, the last component to register a handler for that message name will have its handler called. Messages will often contain other parameters that the handler should use to perform its work.</p>
 
 <p>Handler functions can allow the message to be passed to any previous handler that was registered if it would like to, allowing interception and modification of messages.</p>
 

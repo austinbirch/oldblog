@@ -164,7 +164,7 @@ state. An example of this may be to load extra data when a
 
 ### The message queue
 
-components can register to <span class="monospace">handle</span> messages,
+Components can register to <span class="monospace">handle</span> messages,
 and other components can <span class="monospace">enqueue</span> them. When
 you enqueue a message, the last component to register a handler for that
 message name will have its handler called. Messages will often contain

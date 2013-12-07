@@ -252,7 +252,7 @@ work you requested might not be completed. It might be that you just do
 nothing (roughly the same as if your plugin has refused to load), however you
 may decide to follow a different course of action.
 
-### Problems and things yet to be done
+## Problems and things yet to be done
 
 It is not all wonderful, and there are still lots of details that need to be
 ironed out.
@@ -280,7 +280,7 @@ multiple participants that do not know of the implementation details of each
 other &mdash; sort of like a middleware pattern. I am not too sure on this
 yet, but it is worth some exploration.
 
-### Open source (soon)
+## Open source (soon)
 
 The framework that I have built to develop the application is based on
 [Backbone.js](backbonejs.org), with some small additions in the form of

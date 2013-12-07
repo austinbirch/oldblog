@@ -117,6 +117,7 @@ h3 {
   font-size: pte($h3-size, $base-font-size);
   line-height: pte($baseline, $h3-size);
   margin-bottom: pte($baseline, $h3-size);
+  font-style: italic;
 }
 
 ul, ol {

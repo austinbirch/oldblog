@@ -7,11 +7,11 @@
 // VARIABLES
 
 // type settings
-$header-font-family: myriad-pro, sans-serif;
-$body-font-family: $header-font-family;
+$header-font-family: "futura-pt", sans-serif;
+$body-font-family: "utopia-std-display", Georgia, serif;
 
-$base-font-size: 18;
-$small-font-size: 16;
+$base-font-size: 19;
+$small-font-size: 17;
 
 $h1-size: 34;
 $h2-size: 26;
@@ -98,7 +98,7 @@ p {
 h1, h2, h3 {
   font-family: $header-font-family;
   color: $text-color;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h1 {
@@ -111,13 +111,13 @@ h2 {
   font-size: pte($h2-size, $base-font-size);
   line-height: pte($baseline, $h2-size);
   margin-bottom: pte($baseline, $h2-size);
-  font-style: italic;
 }
 
 h3 {
   font-size: pte($h3-size, $base-font-size);
   line-height: pte($baseline, $h3-size);
   margin-bottom: pte($baseline, $h3-size);
+  font-style: italic;
 }
 
 ul, ol {
@@ -217,9 +217,21 @@ header {
     margin-bottom: pte($baseline, $base-font-size);
   }
 
-  .month-title {
-    margin-top: pte(($baseline/2), $base-font-size);
-    margin-bottom: pte(($baseline/2), $base-font-size);
+  ul > li:first-child {
+    margin-top: 0;
+  }
+
+  .post-item {
+    margin-left: 1em;
+  }
+
+  .month-item {
+    margin-top: pte(($baseline), $base-font-size);
+    margin-bottom: pte(($baseline/3), $base-font-size);
+
+    .month-title {
+      margin-bottom: 0;
+    }
   }
 }
 

@@ -1,0 +1,3 @@
+[submodule "src/lens"]
+	path = src/lens
+	url = git@github.com:austinbirch/lens.git

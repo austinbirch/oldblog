@@ -7,11 +7,11 @@
 // VARIABLES
 
 // type settings
-$header-font-family: myriad-pro, sans-serif;
-$body-font-family: $header-font-family;
+$header-font-family: "futura-pt", sans-serif;
+$body-font-family: "utopia-std-display", Georgia, serif;
 
-$base-font-size: 18;
-$small-font-size: 16;
+$base-font-size: 19;
+$small-font-size: 17;
 
 $h1-size: 34;
 $h2-size: 26;
@@ -98,7 +98,7 @@ p {
 h1, h2, h3 {
   font-family: $header-font-family;
   color: $text-color;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h1 {
@@ -111,7 +111,6 @@ h2 {
   font-size: pte($h2-size, $base-font-size);
   line-height: pte($baseline, $h2-size);
   margin-bottom: pte($baseline, $h2-size);
-  font-style: italic;
 }
 
 h3 {

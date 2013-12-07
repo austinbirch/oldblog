@@ -11,8 +11,8 @@ html {
 body {
   background-color: white;
   color: #111111;
-  font-family: myriad-pro, sans-serif;
-  font-size: 112.5%; }
+  font-family: "utopia-std-display", Georgia, serif;
+  font-size: 118.75%; }
 
 a {
   color: #4f7cb0; }
@@ -20,33 +20,33 @@ a {
     color: #6189b8; }
 
 .small, figure figcaption, header nav ul li, footer p, .post .post-footer p {
-  font-size: 0.88889em;
-  line-height: 1.575em; }
+  font-size: 0.89474em;
+  line-height: 1.56471em; }
 
 p {
   line-height: 1.4em;
   margin-bottom: 1.4em; }
 
 h1, h2, h3 {
-  font-family: myriad-pro, sans-serif;
+  font-family: "futura-pt", sans-serif;
   color: #111111;
-  font-weight: 600; }
+  font-weight: 500; }
 
 h1 {
-  font-size: 1.88889em;
-  line-height: 0.74118em;
-  margin-bottom: 0.74118em; }
+  font-size: 1.78947em;
+  line-height: 0.78235em;
+  margin-bottom: 0.78235em; }
 
 h2 {
-  font-size: 1.44444em;
-  line-height: 0.96923em;
-  margin-bottom: 0.96923em;
-  font-style: italic; }
+  font-size: 1.36842em;
+  line-height: 1.02308em;
+  margin-bottom: 1.02308em; }
 
 h3 {
-  font-size: 1.16667em;
-  line-height: 1.2em;
-  margin-bottom: 1.2em; }
+  font-size: 1.10526em;
+  line-height: 1.26667em;
+  margin-bottom: 1.26667em;
+  font-style: italic; }
 
 ul, ol {
   margin-bottom: 1.4em;
@@ -92,7 +92,7 @@ figure {
 
 header {
   border-bottom: 1px solid #cdd4d2;
-  margin-bottom: 1.34444em; }
+  margin-bottom: 1.34737em; }
   header nav ul {
     text-align: center; }
     header nav ul li {
@@ -106,9 +106,15 @@ header {
   #archive .section-title {
     text-align: center;
     margin-bottom: 1.4em; }
-  #archive .month-title {
-    margin-top: 0.7em;
-    margin-bottom: 0.7em; }
+  #archive ul > li:first-child {
+    margin-top: 0; }
+  #archive .post-item {
+    margin-left: 1em; }
+  #archive .month-item {
+    margin-top: 1.4em;
+    margin-bottom: 0.46667em; }
+    #archive .month-item .month-title {
+      margin-bottom: 0; }
 
 #about-austin {
   margin-top: 1.4em; }
@@ -143,7 +149,7 @@ footer {
   .profile .about {
     display: inline; }
     .profile .about p {
-      font-size: 0.88889em; }
+      font-size: 0.89474em; }
 
 .hire-me-maybe {
   font-weight: 600; }
@@ -154,7 +160,7 @@ footer {
 
 .post {
   padding-top: 2.8em;
-  padding-bottom: 2.74444em;
+  padding-bottom: 2.74737em;
   border-top: 1px solid #cdd4d2; }
   .post .post-header {
     padding: 0 0 2.8em; }
@@ -169,9 +175,9 @@ footer {
           text-decoration: underline;
           color: #6189b8; }
   .post .post-body h2 {
-    margin-top: 1.93846em; }
+    margin-top: 2.04615em; }
   .post .post-body h3 {
-    margin-top: 2.4em; }
+    margin-top: 2.53333em; }
   .post .post-body ul, .post .post-body ol {
     padding-left: 2em;
     list-style-type: disc; }
@@ -198,32 +204,32 @@ footer {
 
 .cv p {
   font-size: 16px;
-  line-height: 1.575em;
-  margin-bottom: 1.575em; }
+  line-height: 1.6625em;
+  margin-bottom: 1.6625em; }
 .cv h1, .cv h2, .cv h3 {
-  font-family: myriad-pro, sans-serif;
+  font-family: "futura-pt", sans-serif;
   color: #111111;
   font-weight: 600; }
 .cv h1 {
   font-size: 1.625em;
-  line-height: 0.74118em;
-  margin-bottom: 0.74118em; }
+  line-height: 0.78235em;
+  margin-bottom: 0.78235em; }
 .cv h2 {
   font-size: 1.3125em;
-  line-height: 0.96923em;
-  margin-bottom: 0.96923em;
+  line-height: 1.02308em;
+  margin-bottom: 1.02308em;
   font-style: normal;
   border-bottom: 1px solid #cdd4d2; }
 .cv h3 {
   font-size: 1.125em;
-  line-height: 1.2em;
-  margin-bottom: 1.2em; }
+  line-height: 1.26667em;
+  margin-bottom: 1.26667em; }
 .cv h4 {
   font-size: 1em;
-  margin-bottom: 0.63492em; }
+  margin-bottom: 0.6015em; }
 .cv ul, .cv ol {
-  margin-bottom: 1.575em;
-  line-height: 1.575em;
+  margin-bottom: 1.6625em;
+  line-height: 1.6625em;
   list-style: none; }
 .cv li {
   font-size: 16px; }

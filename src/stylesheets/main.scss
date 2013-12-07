@@ -216,9 +216,21 @@ header {
     margin-bottom: pte($baseline, $base-font-size);
   }
 
-  .month-title {
-    margin-top: pte(($baseline/2), $base-font-size);
-    margin-bottom: pte(($baseline/2), $base-font-size);
+  ul > li:first-child {
+    margin-top: 0;
+  }
+
+  .post-item {
+    margin-left: 1em;
+  }
+
+  .month-item {
+    margin-top: pte(($baseline), $base-font-size);
+    margin-bottom: pte(($baseline/3), $base-font-size);
+
+    .month-title {
+      margin-bottom: 0;
+    }
   }
 }
 

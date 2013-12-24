@@ -12,7 +12,9 @@ body {
   background-color: white;
   color: #111111;
   font-family: "utopia-std-display", Georgia, serif;
-  font-size: 118.75%; }
+  font-size: 118.75%;
+  /* comment this out to hide baseline grid */
+  /* background: url("http://www.baselineme.com/26.6") center top repeat; */ }
 
 a {
   color: #4f7cb0; }
@@ -28,7 +30,7 @@ p {
   margin-bottom: 1.4em; }
 
 h1, h2, h3 {
-  font-family: "futura-pt", sans-serif;
+  font-family: "utopia-std-display", Georgia, serif;
   color: #111111;
   font-weight: 500; }
 
@@ -167,7 +169,9 @@ footer {
     .post .post-header .post-title {
       margin: 0;
       line-height: 100%;
-      text-align: center; }
+      text-align: center;
+      font-style: italic;
+      font-weight: 600; }
       .post .post-header .post-title a {
         text-decoration: none;
         color: #111111; }
@@ -207,7 +211,7 @@ footer {
   line-height: 1.6625em;
   margin-bottom: 1.6625em; }
 .cv h1, .cv h2, .cv h3 {
-  font-family: "futura-pt", sans-serif;
+  font-family: "utopia-std-display", Georgia, serif;
   color: #111111;
   font-weight: 600; }
 .cv h1 {

@@ -2,6 +2,10 @@
   margin-bottom: 1em;
 }
 
+.lens-thumbnail-container img:hover {
+  cursor: pointer;
+}
+
 .lens-image {
   background-size: contain;
 }

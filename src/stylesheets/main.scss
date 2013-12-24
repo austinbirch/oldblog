@@ -7,8 +7,8 @@
 // VARIABLES
 
 // type settings
-$header-font-family: "futura-pt", sans-serif;
 $body-font-family: "utopia-std-display", Georgia, serif;
+$header-font-family: $body-font-family;
 
 $base-font-size: 19;
 $small-font-size: 17;
@@ -73,8 +73,8 @@ body {
   font-family: $body-font-family;
   font-size: ((100%/16)*$base-font-size);
 
-  // comment this out to hide baseline grid
-  // background: url("http://www.baselineme.com/#{$baseline}") center top repeat;
+  /* comment this out to hide baseline grid */
+  /* background: url("http://www.baselineme.com/#{$baseline}") center top repeat; */
 }
 
 a {
@@ -313,6 +313,8 @@ footer {
       margin: 0;
       line-height: 100%;
       text-align: center;
+      font-style: italic;
+      font-weight: 600;
 
       a {
         text-decoration: none;
@@ -388,7 +390,7 @@ footer {
   $cv-h2-size: 21;
   $cv-h3-size: 18;
   $cv-h4-size: $cv-font-size;
-    
+
   p {
     font-size: 16px; // 16px for cv page
     line-height: pte($baseline, $cv-font-size);
@@ -443,7 +445,7 @@ footer {
 }
 
 // CV PAGE
-@page { 
+@page {
   margin-top: 1cm;
 
   counter-increment: page;
